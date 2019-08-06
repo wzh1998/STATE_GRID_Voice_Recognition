@@ -16,7 +16,7 @@ Companies usually choose to publish RPA to orchestrator, orchestrator can contro
 
  - UIPath Studio, UIRobot are required for your system, Orchestrator is optional.
 
-## Update History:
+## Update History
 
  - 2019.08.06: Implemented online asr system using SDK from Iflytek CO.,LTD., will hold a meeting with subsidiary corporation of Iflytek this week, consider transform asr into an offline system.
 
