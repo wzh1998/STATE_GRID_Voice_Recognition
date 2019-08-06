@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Msc"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/json-jena-1.0"/>
+	<classpathentry kind="lib" path="/Users/ZihaoWang/Documents/Eclipse/workspace/project_2/lib/json-jena-1.0.jar"/>
+	<classpathentry kind="lib" path="/Users/ZihaoWang/Documents/Eclipse/workspace/project_2/lib/Msc.jar"/>
+	<classpathentry kind="output" path="out/production/project_2"/>
+</classpath>

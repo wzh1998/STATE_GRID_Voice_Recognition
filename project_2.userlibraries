@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eclipse-userlibraries>
+  <library name="Msc">
+    <archive path="C:/Users/张丽雅/Desktop/新建文件夹/project_2(1)/project_2/lib/Msc.jar" />
+  </library>
+  <library name="json-jena-1.0">
+    <archive path="C:/Users/张丽雅/Desktop/新建文件夹/project_2(1)/project_2/lib/json-jena-1.0.jar" />
+  </library>
+  <library name="json-jena-1.0 (2)" />
+</eclipse-userlibraries>
+
