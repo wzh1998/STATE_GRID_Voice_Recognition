@@ -27,7 +27,7 @@ public class selfDefine {
         else if (str.contains("中午")) {
             executeLocation = "/file:\"C:\\Users\\张丽雅\\Documents\\UiPath\\BlankProcess\\Flowchart-2.xaml\"";
         }
-        //打开本地文件
+        // Execute Command
         Runtime.getRuntime().exec(new String[]{base, executeLocation});
     }
 }
