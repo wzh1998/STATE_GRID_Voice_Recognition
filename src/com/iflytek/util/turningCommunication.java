@@ -60,25 +60,22 @@ public class turningCommunication {
 		StringBuffer sb=new StringBuffer();
 		try {
 			;
-			// 创建url资源
 			URL url = new URL(urls);
-			// 建立http连接
 			HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-			// 设置允许输出
 			conn.setDoOutput(true);
-				conn.setDoInput(true);
-				conn.setUseCaches(false);
-				conn.setRequestMethod("POST");
-				conn.setRequestProperty("Connection", "Keep-Alive");
-				conn.setRequestProperty("Charset", "UTF-8");
-				byte[] data = buildJSON(msgToSend).getBytes();
-				conn.setRequestProperty("Content-Length", String.valueOf(data.length));
-				conn.setRequestProperty("contentType", "application/json");
-				conn.connect();		
-				OutputStream out = new DataOutputStream(conn.getOutputStream()) ;
-				out.write(buildJSON(msgToSend).getBytes());
-				out.flush();
-				out.close();
+			conn.setDoInput(true);
+			conn.setUseCaches(false);
+			conn.setRequestMethod("POST");
+			conn.setRequestProperty("Connection", "Keep-Alive");
+			conn.setRequestProperty("Charset", "UTF-8");
+			byte[] data = buildJSON(msgToSend).getBytes();
+			conn.setRequestProperty("Content-Length", String.valueOf(data.length));
+			conn.setRequestProperty("contentType", "application/json");
+			conn.connect();		
+			OutputStream out = new DataOutputStream(conn.getOutputStream()) ;
+			out.write(buildJSON(msgToSend).getBytes());
+			out.flush();
+			out.close();
  
 			System.out.print(conn.getResponseCode());
 			
@@ -105,7 +102,6 @@ public class turningCommunication {
 		} catch (Exception e) {}
 		
 		return sb.toString();
- 
 	}
 	public static void main(String[] args) throws JSONException {
 		String txtToSend = "";
