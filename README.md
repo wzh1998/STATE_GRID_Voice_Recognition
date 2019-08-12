@@ -20,3 +20,8 @@ Companies usually choose to publish RPA to orchestrator, orchestrator can contro
 
  - 2019.08.06: Implemented online asr system using SDK from Iflytek CO.,LTD., will hold a meeting with subsidiary corporation of Iflytek this week, consider transform asr into an offline system.
 
+ - 2019.08.12: 
+
+ 	- Implemented turning result parsing system, including a JSON message "piecing together" method in Java and a Json parse method to deframe the result. 
+ 	- Combine Turning, ASR, TTS modules. Read the audio voice from microphone, translate it into text by ASR, analysis the meaning by turning module, finally display and play the text and audio result from turning API.
+
