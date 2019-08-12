@@ -1,4 +1,4 @@
-# STATE_GRID_Voice_Recognization
+# STATE GRID Voice Control System
 
 **SGVR is a Voice Recognization System Designed for State Grid Corporation of China, the program can execute correspond RPA (Robotic Process Automation) by users' voice.**
 
