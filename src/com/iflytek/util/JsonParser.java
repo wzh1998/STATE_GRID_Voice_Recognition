@@ -30,10 +30,10 @@ public class JsonParser {
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
-		} 
+		}
 		return ret.toString();
 	}
-	
+
 	public static String parseGrammarResult(String json) {
 		StringBuffer ret = new StringBuffer();
 		try {
@@ -59,10 +59,10 @@ public class JsonParser {
 		} catch (Exception e) {
 			e.printStackTrace();
 			ret.append("没有匹配结果.");
-		} 
+		}
 		return ret.toString();
 	}
-	
+
 	public static String parseTurningResult(String json) {
 		StringBuffer ret = new StringBuffer();
 		try {
@@ -70,7 +70,7 @@ public class JsonParser {
 			JSONObject joResult = new JSONObject(tokener);
 
 			JSONArray turningResults = joResult.getJSONArray("results");
-			
+
 			for (int i = 0; i < turningResults.length(); i++) {
 				JSONObject obj = turningResults.getJSONObject(i);
 				JSONObject text = obj.getJSONObject("values");
@@ -78,7 +78,7 @@ public class JsonParser {
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
-		} 
+		}
 		return ret.toString();
 	}
 }

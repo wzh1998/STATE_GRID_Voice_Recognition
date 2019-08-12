@@ -47,11 +47,11 @@ public class XmlParser {
 			buffer.append("【ACTION】" + operation.getFirstChild().getNodeValue());
 			buffer.append("\n");
 			
+
 		}catch(Exception e){
 			e.printStackTrace();
 		};
 		buffer.append("【ALL】" + xml);
 		return buffer.toString();
-		
 	}
 }
