@@ -62,4 +62,23 @@ public class JsonParser {
 		} 
 		return ret.toString();
 	}
+	
+	public static String parseTurningResult(String json) {
+		StringBuffer ret = new StringBuffer();
+		try {
+			JSONTokener tokener = new JSONTokener(json);
+			JSONObject joResult = new JSONObject(tokener);
+
+			JSONArray turningResults = joResult.getJSONArray("results");
+			
+			for (int i = 0; i < turningResults.length(); i++) {
+				JSONObject obj = turningResults.getJSONObject(i);
+				JSONObject text = obj.getJSONObject("values");
+				ret.append(text.getString("text"));
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} 
+		return ret.toString();
+	}
 }

@@ -135,7 +135,7 @@ public class MainView extends JFrame implements ActionListener {
 			mContentPanel.repaint();
 		} else if (e.getSource() == jbtnGrammar) {
 			mContentPanel.remove(mMainJpanel);
-			mContentPanel.add(new AsrSpeechView());
+			mContentPanel.add(new TurningSpeechView());
 			mContentPanel.revalidate();
 			mContentPanel.repaint();
 		}  else if (e.getSource() == jbtnSynthesize) {

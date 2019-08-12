@@ -169,7 +169,7 @@ public class TtsSpeechView extends JPanel implements ActionListener {
 				mTts.stopSpeaking();
 				mTts.destroy();
 			}
-
+			
 			JFrame frame = MainView.getFrame();
 			frame.getContentPane().remove(this);
 			JPanel panel = ((MainView) frame).getMainJpanel();
@@ -182,26 +182,27 @@ public class TtsSpeechView extends JPanel implements ActionListener {
 		}
 		
 		DebugLog.Log( "actionPerformed leave" );
+		
 	}
 
 	private SynthesizerListener mSynListener = new SynthesizerListener() {
-
+		
 		@Override
 		public void onSpeakBegin() {
 		}
-
+		
 		@Override
 		public void onBufferProgress(int progress, int beginPos, int endPos,
 				String info) {
 			DebugLog.Log("--onBufferProgress--progress:" + progress
 					+ ",beginPos:" + beginPos + ",endPos:" + endPos);
 		}
-
+		
 		@Override
 		public void onSpeakPaused() {
-
+		
 		}
-
+		
 		@Override
 		public void onSpeakResumed() {
 
