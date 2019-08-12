@@ -230,7 +230,9 @@ public class IatSpeechView extends JPanel implements ActionListener {
 			System.out.println("debug::::"+text);
 			// 2019.08.05
 			try {
-				selfDefine.produceAction(text);
+				//2019.08.12
+				String turningResult = selfDefine.produceAction(text);
+				resultArea.append(parseText);
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

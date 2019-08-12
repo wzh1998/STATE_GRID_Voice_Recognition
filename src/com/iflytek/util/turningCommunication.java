@@ -59,7 +59,7 @@ public class turningCommunication {
 	public static String getJsonData(String msgToSend,String urls) {
 		StringBuffer sb=new StringBuffer();
 		try {
-			;
+			
 			URL url = new URL(urls);
 			HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 			conn.setDoOutput(true);
@@ -99,20 +99,27 @@ public class turningCommunication {
 			} else {
 				System.out.println("error++");	
 			}
-		} catch (Exception e) {}
+		} catch (Exception e) {
+			System.out.print("...Connection Failed! Check your network connection!");
+			
+		}
 		
 		return sb.toString();
 	}
-	public static void main(String[] args) throws JSONException {
+	public static void main(String[] args) {
 		String txtToSend = "";
 		String url = "http://openapi.tuling123.com/openapi/api/v2";
 		Scanner sc = new Scanner(System.in); 
-
-		while(true) {
-			System.out.print("\nInput: ");
-			txtToSend = sc.nextLine();
-			String data = getJsonData(txtToSend,url);
-			System.out.print(JsonParser.parseTurningResult(data));
+		try {
+			while(true) {
+				System.out.print("\nInput: ");
+				txtToSend = sc.nextLine();
+				String data = getJsonData(txtToSend,url);
+				System.out.print(JsonParser.parseTurningResult(data));
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
+		
 	}
 }
