@@ -62,7 +62,7 @@ public class JsonParser {
 		}
 		return ret.toString();
 	}
-
+	// 解析图灵机器人的json返回结果
 	public static String parseTurningResult(String json) {
 		StringBuffer ret = new StringBuffer();
 		try {

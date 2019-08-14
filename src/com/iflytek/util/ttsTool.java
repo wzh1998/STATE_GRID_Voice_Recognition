@@ -31,6 +31,7 @@ public class ttsTool {
 
     private boolean mIsLoop = true;
 
+    // 将文字合成pcm音频文件
     public static void startSyn(String synMsg) {
 
         SpeechUtility.createUtility("appid=" + APPID);
@@ -66,7 +67,7 @@ public class ttsTool {
         //启用合成音频流事件，不需要时，不用设置此参数
         speechSynthesizer.setParameter( SpeechConstant.TTS_BUFFER_EVENT, "1" );
         // 设置合成音频保存位置（可自定义保存位置），默认不保存
-        speechSynthesizer.synthesizeToUri(synMsg , "C:\\Users\\张丽雅\\Desktop\\project\\tts_result.pcm",
+        speechSynthesizer.synthesizeToUri(synMsg , "D:\\software\\IDEA\\zhang-1\\tts_result.pcm",
                 synthesizeToUriListener);
     }
 

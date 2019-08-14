@@ -1,10 +1,6 @@
 package com.iflytek.util;
 
-import java.io.BufferedReader;
-import java.io.DataOutputStream;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.OutputStream;
+import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.Scanner;
@@ -14,6 +10,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 public class turningCommunication {
+    // 通过字符串拼接图灵API接收的Json格式
     public static String buildJSON(String coreMsg) {
         String reqType = "\"reqType\":0,";
         String perception = "\"perception\": ";
@@ -55,7 +52,7 @@ public class turningCommunication {
 //		System.out.print(finMsg);
         return finMsg;
     }
-
+    // 将Json格式的请求通过post上传到API接口，并接收返回的Json格式。
     public static String getJsonData(String msgToSend,String urls) {
         StringBuffer sb=new StringBuffer();
         try {
@@ -84,6 +81,7 @@ public class turningCommunication {
                 System.out.println("...Connection Established!");
                 // Request for returning data
                 InputStream in1 = conn.getInputStream();
+
                 try {
                     String readLine = new String();
                     BufferedReader responseReader = new BufferedReader(new InputStreamReader(in1,"UTF-8"));
@@ -103,9 +101,16 @@ public class turningCommunication {
             System.out.print("...Connection Failed! Check your network connection!");
 
         }
+        String sub = null;
+        try {
+            sub = new String(sb.toString().getBytes("UTF-8"),"UTF-8");
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+        return sub;
 
-        return sb.toString();
     }
+    // 测试用
     public static void main(String[] args) {
         String txtToSend = "";
         String url = "http://openapi.tuling123.com/openapi/api/v2";

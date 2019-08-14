@@ -12,6 +12,7 @@ import javax.sound.sampled.DataLine;
 import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.SourceDataLine;
 
+// 播放tts生成pcm语音文件的类
 public class pcmPlay {
 
     /**
@@ -21,7 +22,7 @@ public class pcmPlay {
         // TODO Auto-generated method stub
 
         try {
-            File file = new File("C:\\Users\\张丽雅\\Desktop\\project\\tts_result.pcm");
+            File file = new File("D:\\software\\IDEA\\zhang-1\\tts_result.pcm");
             System.out.println(file.length());
             int offset = 0;
             int bufferSize = Integer.valueOf(String.valueOf(file.length())) ;

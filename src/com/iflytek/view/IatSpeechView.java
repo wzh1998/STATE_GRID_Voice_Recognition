@@ -226,14 +226,14 @@ public class IatSpeechView extends JPanel implements ActionListener {
 			String text = results.getResultString();
 			String parseText = JsonParser.parseIatResult(text);
 
-			resultArea.append("Q: " + parseText + "\n");
+			if(parseText.length() > 1) resultArea.append("Q: " + parseText + "\n");
 //			text = resultArea.getText();
 			System.out.println("debug::::" + text);
 			// 2019.08.05
 			try {
-				//2019.08.12
+				//2019.08.12 将selfdefine的返回结果显示在屏幕
 				String turningResult = selfDefine.produceAction(parseText);
-				resultArea.append("A:" + turningResult + "\n");
+				if(turningResult.length() > 1) resultArea.append("A:" + turningResult + "\n");
 				if(parseText.length() > 1) pcmPlay.play();
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
