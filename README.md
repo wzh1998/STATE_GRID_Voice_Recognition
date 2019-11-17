@@ -12,16 +12,16 @@ Companies usually choose to publish RPA to orchestrator, orchestrator can contro
 
 ## Requirements
 
- - The running environment can be either Windows 7+ or Linux with Java JDK higher than JDK 8. 
+ - The developing and executing environments can be either Windows 7+ or Linux with Java JDK higher than JDK 8. 
 
  - UIPath Studio, UIRobot are required for your system, Orchestrator is optional.
 
 ## Update History
 
  - **2019.08.06:** 
- 	- Implemented offline asr system using SDK from Iflytek CO.,LTD., will hold a meeting with subsidiary corporation of Iflytek this week, consider transform asr into an offline system.
+ 	- Implemented offline asr system using SDK from Iflytek CO.,LTD., held a meeting with subsidiary corporation of Iflytek this week, considered transform asr into an offline system.
 
  - **2019.08.12:** 
  	- Implemented turning result parsing system, including a JSON message "piecing together" method in Java and a Json parse method to deframe the result. 
- 	- Combine Turning, ASR, TTS modules. Read the audio voice from microphone, translate it into text by ASR, analysis the meaning by turning module, finally display and play the text and audio result from turning API.
+ 	- Combined Turning, ASR, TTS modules. Read the audio voice from microphone, translate it into text by ASR, analysis the meaning by turning module, finally displayed and played the text and audio result from turning API.
 
