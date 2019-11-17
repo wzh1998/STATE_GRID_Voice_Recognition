@@ -73,12 +73,19 @@ public class JsonParser {
 
 			for (int i = 0; i < turningResults.length(); i++) {
 				JSONObject obj = turningResults.getJSONObject(i);
-				JSONObject text = obj.getJSONObject("values");
-				ret.append(text.getString("text"));
+				try{
+					JSONObject text = obj.getJSONObject("values");
+					ret.append(text.getString("text"));
+				}catch(Exception e) {
+					JSONObject text = obj.getJSONObject("values");
+					ret.append(text.getString("url"));
+					Runtime.getRuntime().exec("rundll32 url.dll,FileProtocolHandler " + text.getString("url"));
+				}
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		
 		return ret.toString();
 	}
 }
